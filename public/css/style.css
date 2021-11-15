@@ -1,54 +1,66 @@
-:root{
-    
-}
-
-body {
-    color: blue;
-    
-    display: flex;
-    flex-direction: row;
-}
-
-body, h1 {
+body{
     margin: 0;
 }
 
-.logo{
-    background-color: cornsilk;
-    
-}
-
-.login-form{
-    background-color: blue;
-
-}
-
-.logo, .login-form{
+.container{
+    width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
+    background: transparent linear-gradient(180deg, #19181A 0%, #656466 100%) 0% 0% no-repeat padding-box;
 
-form {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    justify-content: center;
+    align-items: center;
 }
 
-@media screen and (max-device-width:640px),
-screen and(max-width:411px){
-    
-    body{
-        flex-direction: column;
-    }
+.logo{
+    height: 20%;
+}
 
-    .logo{
-        height: 20vh;
-    }
+.login-container{
+    height: 30%;
+}
 
-    .login-form{
-        height: 80vh;
-    }
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+button{
+    background: transparent linear-gradient(180deg, #EC6410 0%, #763208 100%) 0% 0% no-repeat padding-box;
+    box-shadow: inset 0px 10px 10px #00000029;
+    opacity: 0.8;
+    border-radius: 25px;
+
+    width: 20vw;
+    border: none;
+    height: 100%;
+    color: #A9A8A9;
+    margin: 1em;
+    line-height: 3.5em;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    color: #A8A7A8;
+    padding: 1em;
+    margin: 1em;
+    width: 150%;
+}
+
+.signup-container{
+    height: 30%;
+    justify-content: center;
+}
+
+.start-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
