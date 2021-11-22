@@ -3,9 +3,12 @@ body{
 }
 
 header{
-    width: 100vw;
-    height: 15vh;
+    height: 15%;
     background: transparent linear-gradient(180deg, #19181A 0%, #656466 100%) 0% 0% no-repeat padding-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .container{
@@ -19,9 +22,16 @@ header{
     align-items: center;
 }
 
+.base-container{
+    background: transparent linear-gradient(180deg, #FFFFFF 0%, #5E5E5E 100%) 0% 0% no-repeat padding-box;
+
+    width: 100vw;
+    height: 100vh;
+}
+
 .logo{
     height: 30%;
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
 }
@@ -55,6 +65,10 @@ button{
     line-height: 3.5em;
 }
 
+button:hover{
+    opacity: 1;
+}
+
 input{
     background-color: transparent;
     border: none;
@@ -63,6 +77,26 @@ input{
     padding: 1em;
     margin: 1em;
     width: 20%;
+}
+
+.main_page_logo{
+    width: 30%;
+    height: 100%;
+    margin-left: 2vw;
+    display: flex;
+    align-items: center;
+}
+
+.main_page_profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 15%;
+    height: 100%;
+}
+
+.main_page_profile > img{
+    margin: 1vh 2vw;
 }
 
 
@@ -74,4 +108,9 @@ input{
     button{
         width: 50%;
     }
+
+    .main_page_logo{
+        width: 50%;
+    }
+
 }
