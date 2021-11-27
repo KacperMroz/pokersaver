@@ -52,7 +52,7 @@ form{
     width: 100%;
 }
 
-button{
+button, .button {
     background: transparent linear-gradient(180deg, #EC6410 0%, #763208 100%) 0% 0% no-repeat padding-box;
     box-shadow: inset 0px 10px 10px #00000029;
     opacity: 0.8;
@@ -63,6 +63,8 @@ button{
     color: #A9A8A9;
     margin: 1em;
     line-height: 3.5em;
+    text-decoration: none;
+    text-align: center;
 }
 
 button:hover{
