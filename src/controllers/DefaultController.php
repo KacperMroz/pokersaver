@@ -19,4 +19,8 @@ class DefaultController extends AppController{
     public function main(){
         $this->render('main_page');
     }
+
+    public function session(){
+        $this->render('session');
+    }
 }

@@ -9,4 +9,5 @@ Routing::get('start', 'DefaultController');
 Routing::get('login', 'DefaultController');
 Routing::get('signup', 'DefaultController');
 Routing::get('main', 'DefaultController');
+Routing::get('session', 'DefaultController');
 Routing::run($path);
