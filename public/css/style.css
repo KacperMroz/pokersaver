@@ -3,7 +3,7 @@ body{
 }
 
 header{
-    height: 15%;
+    height: 100%;
     background: transparent linear-gradient(180deg, #19181A 0%, #656466 100%) 0% 0% no-repeat padding-box;
 
     display: flex;
@@ -27,6 +27,9 @@ header{
 
     width: 100vw;
     height: 100vh;
+
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
 .logo{
@@ -99,6 +102,37 @@ input{
 
 .main_page_profile > img{
     margin: 1vh 2vw;
+}
+
+.menu-container{
+    
+    /* background: transparent linear-gradient(180deg, #19181A 0%, #656466 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 37px;
+    opacity: 0.9; */
+
+    grid-row: 3/5;
+    display: grid;
+    grid-template-columns: 15% 30% 10% 30% 15%;
+
+}
+
+.new-session-container{
+    background: transparent linear-gradient(180deg, #19181A 0%, #656466 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 37px;
+    opacity: 0.9;
+    grid-column: 2;
+    text-decoration: none;
+}
+
+.new-notes-container{
+    background: transparent linear-gradient(180deg, #19181A 0%, #656466 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 37px;
+    opacity: 0.9;
+    grid-column: 4;
+    text-decoration: none;
 }
 
 
