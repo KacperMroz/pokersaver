@@ -8,7 +8,7 @@ class DefaultController extends AppController{
         $this->render('starting_page');
     }
     
-    public function login(){
+    public function log(){
         $this->render('login');
     }
 

@@ -13,7 +13,7 @@
             <img src="public/img/logo.svg " style="width: 100%;">
         </div>
         <div class="login-container">
-                <a class='button' href='/login'>LOGIN</a>
+                <a class='button' href='/log'>LOGIN</a>
                 <a class='button' href='/signup'>SIGN UP</a>
         </div>
     </div>
