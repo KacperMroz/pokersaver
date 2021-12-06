@@ -23,4 +23,8 @@ class DefaultController extends AppController{
     public function session(){
         $this->render('session');
     }
+
+    public function profile(){
+        $this->render('profile');
+    }
 }
