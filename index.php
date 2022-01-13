@@ -10,6 +10,8 @@ Routing::get('log', 'DefaultController');
 Routing::get('signup', 'DefaultController');
 Routing::get('main', 'DefaultController');
 Routing::get('session', 'DefaultController');
+Routing::get('add_note', 'DefaultController');
 Routing::get('profile', 'DefaultController');
 Routing::post('login', 'SecurityController');
+Routing::post('addNote', 'NoteController');
 Routing::run($path);

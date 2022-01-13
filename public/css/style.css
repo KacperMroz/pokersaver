@@ -74,7 +74,7 @@ button:hover{
     opacity: 1;
 }
 
-input{
+input, textarea{
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #FFFFFF;
@@ -140,6 +140,10 @@ input{
 
 .new-session-container > img{
     margin: 10%;
+}
+
+.add-note{
+    grid-row: 3
 }
 
 

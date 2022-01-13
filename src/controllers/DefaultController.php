@@ -27,4 +27,8 @@ class DefaultController extends AppController{
     public function profile(){
         $this->render('profile');
     }
+
+    public function add_note(){
+        $this->render('add_note');
+    }
 }

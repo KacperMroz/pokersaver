@@ -13,17 +13,13 @@
             <div class="main_page_logo">
                 <img src="public/img/logo.svg " style="width: 100%;height: 100%;">
             </div>
-            <a class="main_page_profile" href="/profile">
+            <div class="main_page_profile">
                 <img src="public/img/profile.svg ">
-            </a>
+            </div>
         </header>
-        <div class="menu-container">
-            <a class="new-session-container" href="/session">
-                <img src="public/img/cards.svg ">
-            </a>
-            <a class="new-notes-container" href='/add_note'>
-                <img src="public/img/notes.svg ">
-            </a>
+        <div>
+            <h2><?= $note->getTitle()?></h2>
+            <h3><?= $note->getDescription()?></h3>
         </div>
     </div>
 </body>
