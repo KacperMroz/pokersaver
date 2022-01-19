@@ -12,6 +12,8 @@ Routing::get('main', 'DefaultController');
 Routing::get('session', 'DefaultController');
 Routing::get('add_note', 'DefaultController');
 Routing::get('profile', 'DefaultController');
+Routing::get('note_description', 'DefaultController');
+Routing::get('notes_page', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::post('addNote', 'NoteController');
 Routing::run($path);

@@ -24,6 +24,14 @@ class DefaultController extends AppController{
         $this->render('session');
     }
 
+    public function note_description(){
+        $this->render('note_description');
+    }
+
+    public function notes_page(){
+        $this->render('notes_page');
+    }
+
     public function profile(){
         $this->render('profile');
     }

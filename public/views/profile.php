@@ -15,7 +15,7 @@
             </div>
             <div class="buttons_container">
                 <a class='button' href='/signup'>CURRENT SESSION</a>
-                 <a class='button' href='/signup'>YOUR NOTES</a>
+                 <a class='button' href='/notes_page'>YOUR NOTES</a>
             </div>
         </nav>
         <main>

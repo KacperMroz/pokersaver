@@ -10,12 +10,12 @@
 <body>
     <div class="base-container">
         <header>
-            <div class="main_page_logo">
+            <a class="main_page_logo" href="/main">
                 <img src="public/img/logo.svg " style="width: 100%;height: 100%;">
-            </div>
-            <div class="main_page_profile">
+            </a>
+            <a class="main_page_profile" href="/profile">
                 <img src="public/img/profile.svg ">
-            </div>
+            </a>
         </header>
         <section class="add-note">
         <form action="addNote" method="POST">
