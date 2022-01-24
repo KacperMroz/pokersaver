@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="PS-213.6461.83">
+    <data-source name="PostgreSQL - dcvo4qbs2tcctm@ec2-63-34-153-52.eu-west-1.compute.amazonaws.com" uuid="a92b0e71-4731-4d1d-9c88-3763e31bf78f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <secret-storage>forget</secret-storage>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
