@@ -39,7 +39,7 @@ class NoteRepository extends Repository
         ]);
     }
 
-    public function getNotes(){
+    public function getNotes(): array{
         $result = [];
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM notes

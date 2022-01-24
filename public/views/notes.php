@@ -10,7 +10,7 @@
     <title>MAIN PAGE</title>
 </head>
 <body>
-    <div class="base-container">
+    <div class="notes-container">
         <header>
             <a class="main_page_logo" href="/main">
                 <img src="public/img/logo.svg " style="width: 100%;height: 100%;">
@@ -20,13 +20,15 @@
             </a>
         </header>
         <section class="notes">
-            <div id="note-1">
-                <a href="\note_description">
+            <?php foreach ($notes as $note): ?>
+                <div id="note-1">
+                 <a href="\note_description">
                     <i class="fas fa-user" style="font-size: 1000%;"></i>
                     <h2><?= $note->getTitle()?></h2>
 <!--                    <h3>--><?//= $note->getDescription()?><!--</h3>-->
                 </a>
             </div>
+            <? endforeach; ?>
         </section>
     </div>
 </body>
