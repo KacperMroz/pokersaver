@@ -12,9 +12,6 @@ class DefaultController extends AppController{
         $this->render('login');
     }
 
-    public function signup(){
-        $this->render('signup_page');
-    }
 
     public function main(){
         $this->render('main_page');

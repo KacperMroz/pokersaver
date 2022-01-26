@@ -14,8 +14,12 @@
                 <img src="public/img/profile.svg ">
             </div>
             <div class="buttons_container">
-                <a class='button' href='/signup'>CURRENT SESSION</a>
-                 <a class='button' href='/notes_page'>YOUR NOTES</a>
+                <a class='button' href='/main_page'>CURRENT SESSION</a>
+                <a class='button' href='/notes'>YOUR NOTES</a>
+                <form class="logout-form" action="logout" method="POST">
+                    <button type="submit">LOGOUT</button>
+                </form>
+
             </div>
         </nav>
         <main>

@@ -17,6 +17,24 @@
                 <img src="public/img/profile.svg ">
             </a>
         </header>
+        <div class="login-container">
+            <form class="register" action="register" method="POST">
+                <div class="messages">
+                    <?php
+                    if(isset($messages)){
+                        foreach($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
+                <input name="email" type="text" placeholder="email@email.com">
+                <input name="password" type="password" placeholder="password">
+                <input name="confirmedPassword" type="password" placeholder="confirm password">
+                <input name="nickname" type="text" placeholder="name">
+                <button type="submit">SIGN UP</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

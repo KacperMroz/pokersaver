@@ -12,7 +12,7 @@
         <img src="public/img/logo.svg" style="width: 100%">
     </div>
     <div class="login-container">
-        <form class="register" action="register" method="POST">
+        <form class="register" action="signup" method="POST">
             <div class="messages">
                 <?php
                 if(isset($messages)){
@@ -25,7 +25,7 @@
             <input name="email" type="text" placeholder="email@email.com">
             <input name="password" type="password" placeholder="password">
             <input name="confirmedPassword" type="password" placeholder="confirm password">
-            <input name="nickname" type="text" placeholder="name">
+            <input name="username" type="text" placeholder="name">
             <button type="submit">SIGN UP</button>
         </form>
     </div>

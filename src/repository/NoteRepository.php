@@ -24,7 +24,7 @@ class NoteRepository extends Repository
         );
     }
 
-    public function addNote(Note $note): void
+    public function addNote(Note $note, $id): void
     {
         $stmt = $this->database->connect()->prepare('
             INSERT INTO notes (title, description, user_id)
@@ -35,15 +35,16 @@ class NoteRepository extends Repository
         $stmt->execute([
             $note->getTitle(),
             $note->getDescription(),
-            $assignedById
+            $id
         ]);
     }
 
-    public function getNotes(): array{
+    public function getNotes($id): array{
         $result = [];
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM notes
+            SELECT * FROM notes WHERE notes.user_id = :id
         ');
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -55,6 +56,18 @@ class NoteRepository extends Repository
         }
 
         return $result;
+    }
+
+    public function getNoteByTitle(string $searchString){
+        $searchString = '%'.strtolower($searchString).'%';
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM notes WHERE LOWER(title) LIKE :search OR LOWER(description) LIKE :search
+        ');
+        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
 

@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/notes.css">
     <script src="https://kit.fontawesome.com/a956a3a1ab.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/search.js" defer></script>
     <title>MAIN PAGE</title>
 </head>
 <body>
@@ -19,6 +20,9 @@
                 <img src="public/img/profile.svg ">
             </a>
         </header>
+        <div class="search-bar">
+            <input placeholder="search note">
+        </div>
         <section class="notes">
             <?php foreach ($notes as $note): ?>
                 <div id="note-1">
@@ -33,3 +37,13 @@
     </div>
 </body>
 </html>
+
+<template id="note-template">
+    <div id="">
+        <a href="\note_description">
+            <i class="fas fa-user" style="font-size: 1000%;"></i>
+            <h2>title</h2>
+            <h3>description</h3>
+        </a>
+    </div>
+</template>

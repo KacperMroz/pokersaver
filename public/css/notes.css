@@ -5,7 +5,26 @@
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 15% 85%;
+    grid-template-rows: 15% 15% 70%;
+}
+
+.search-bar {
+    width: 70%;
+    padding: 2em;
+    justify-self: center;
+}
+
+.search-bar > input {
+    background: #CDCDCD 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 23px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: black;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 section{
@@ -22,7 +41,7 @@ section>div{
     align-items: center;
 }
 
-a {
+section>div>a{
     text-decoration: none;
     color: black;
     display: flex;
