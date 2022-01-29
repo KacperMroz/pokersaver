@@ -17,8 +17,8 @@
                 <img src="public/img/profile.svg ">
             </a>
         </header>
-        <div class="login-container">
-            <form class="register" action="register" method="POST">
+        <div class="add-session-container">
+            <form class="register" action="addSession" method="POST">
                 <div class="messages">
                     <?php
                     if(isset($messages)){
@@ -28,11 +28,10 @@
                     }
                     ?>
                 </div>
-                <input name="email" type="text" placeholder="email@email.com">
-                <input name="password" type="password" placeholder="password">
-                <input name="confirmedPassword" type="password" placeholder="confirm password">
-                <input name="nickname" type="text" placeholder="name">
-                <button type="submit">SIGN UP</button>
+                <input name="title" type="text" placeholder="session title">
+                <input name="buyin" type="number" placeholder="buy in">
+                <input name="cashout" type="number" placeholder="cashout">
+                <button type="submit">submit</button>
             </form>
         </div>
     </div>

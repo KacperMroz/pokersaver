@@ -29,11 +29,12 @@
                  <a href="\note_description">
                     <i class="fas fa-user" style="font-size: 1000%;"></i>
                     <h2><?= $note->getTitle()?></h2>
-<!--                    <h3>--><?//= $note->getDescription()?><!--</h3>-->
+                    <h3><?= $note->getDescription()?></h3>
                 </a>
             </div>
             <? endforeach; ?>
         </section>
+        <a class="new-note-button" href="/add_note">+</a>
     </div>
 </body>
 </html>

@@ -5,7 +5,7 @@ require_once __DIR__.'/../models/Note.php';
 
 class NoteRepository extends Repository
 {
-    public function getNote(string $id): Note
+    public function getNote(string $id):? Note
     {
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public.notes WHERE id = :id
@@ -15,36 +15,35 @@ class NoteRepository extends Repository
 
         $note = $stmt->fetch(PDO::FETCH_ASSOC);
 
-//        if($note == false){
-//            return null;
-//        }
+        if($note == false){
+            return null;
+        }
         return new Note(
             $note['title'],
             $note['descprition']
         );
     }
 
-    public function addNote(Note $note, $id): void
+    public function addNote(Note $note, $user_id): void
     {
         $stmt = $this->database->connect()->prepare('
             INSERT INTO notes (title, description, user_id)
             VALUES (?, ?, ?)
         ');
 
-        $assignedById = 1;
         $stmt->execute([
             $note->getTitle(),
             $note->getDescription(),
-            $id
+            $user_id
         ]);
     }
 
-    public function getNotes($id): array{
+    public function getNotes($user_id): array{
         $result = [];
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM notes WHERE notes.user_id = :id
+            SELECT * FROM notes WHERE notes.user_id = :user_id
         ');
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
         $stmt->execute();
         $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

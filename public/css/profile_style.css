@@ -27,7 +27,7 @@ nav{
     grid-row: 3;
 }
 
-.button {
+.button, button {
     background: transparent linear-gradient(
     180deg, #EC6410 0%, #763208 100%) 0% 0% no-repeat padding-box;
     box-shadow: inset 0px 10px 10px #00000029;
@@ -48,6 +48,18 @@ nav{
     height: 100%;
     align-self: center;
     margin-top: 10%;
+}
+
+.logout-form{
+    display: flex;
+    grid-row: 5;
+    justify-content: center;
+}
+
+.stats-container{
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-device-width: 420px) {

@@ -5,7 +5,7 @@
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 15% 15% 70%;
+    grid-template-rows: 15% 15% 60% 10%;
 }
 
 .search-bar {
@@ -51,4 +51,21 @@ section>div>a{
 
 a:hover{
     opacity: 0.5;
+}
+
+.new-note-button{
+    background: transparent linear-gradient(180deg, #EC6410 0%, #763208 100%) 0% 0% no-repeat padding-box;
+    box-shadow: inset 0px 10px 10px #00000029;
+    opacity: 0.8;
+    border-radius: 50%;
+    width: 2.5em;
+    justify-self: end;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 250%;
+    color: darkgray;
+    font-weight: 1000;
 }

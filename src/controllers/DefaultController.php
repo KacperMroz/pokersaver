@@ -17,8 +17,8 @@ class DefaultController extends AppController{
         $this->render('main_page');
     }
 
-    public function session(){
-        $this->render('session');
+    public function add_session(){
+        $this->render('add_session');
     }
 
     public function note_description(){
@@ -26,11 +26,10 @@ class DefaultController extends AppController{
     }
 
 
-    public function profile(){
-        $this->render('profile');
-    }
+
 
     public function add_note(){
         $this->render('add_note');
     }
+
 }

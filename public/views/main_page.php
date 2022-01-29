@@ -18,7 +18,7 @@
             </a>
         </header>
         <div class="menu-container">
-            <a class="new-session-container" href="/session">
+            <a class="new-session-container" href="/add_session">
                 <img src="public/img/cards.svg ">
             </a>
             <a class="new-notes-container" href='/add_note'>

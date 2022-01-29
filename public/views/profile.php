@@ -16,14 +16,18 @@
             <div class="buttons_container">
                 <a class='button' href='/main_page'>CURRENT SESSION</a>
                 <a class='button' href='/notes'>YOUR NOTES</a>
-                <form class="logout-form" action="logout" method="POST">
-                    <button type="submit">LOGOUT</button>
-                </form>
-
             </div>
+            <form class="logout-form" action="logout" method="POST">
+                <button type="submit">LOGOUT</button>
+            </form>
         </nav>
         <main>
+            <div class="stats-container">
+                <h1>SESSIONS PLAYED: <?php echo $sessionCount ?></h1>
 
+                <h1>TOTAL RESULT: <?php echo $result ?></h1></h1>
+                <h1>AVG RESULT PER SESSION: <?php echo $average ?></h1></h1>
+            </div>
         </main>
     </div>
 </body>

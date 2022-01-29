@@ -153,6 +153,10 @@ input, textarea{
     outline: none;
 }
 
+.add-session-container{
+    grid-row: 3/5;
+}
+
 
 @media only screen and (max-device-width: 420px) {
     

@@ -10,18 +10,18 @@ class NoteController extends AppController
     private $messages = [];
     private $noteRepository;
     private $userRepository;
-    private $id;
+    private $user_id;
 
     public function __construct()
     {
         parent::__construct();
         $this->noteRepository = new NoteRepository();
         $this->userRepository = new UserRepository();
-        $this->id = $_COOKIE['id'];
+        $this->user_id = $_COOKIE['id'];
     }
 
     public function notes(){
-        $notes = $this->noteRepository->getNotes($this->id);
+        $notes = $this->noteRepository->getNotes($this->user_id);
         $this->render('notes', ['notes' => $notes]);
     }
 
@@ -31,11 +31,11 @@ class NoteController extends AppController
         if($this->isPost()){
 
             $note = new Note($_POST['title'], $_POST['description']);
-            $this->noteRepository->addNote($note, $this->id);
+            $this->noteRepository->addNote($note, $this->user_id);
 
             return $this->render('notes', [
                 'messages' => $this->messages,
-                'notes' => $this->noteRepository->getNotes($this->id)
+                'notes' => $this->noteRepository->getNotes($this->user_id)
             ]);
         }
 
