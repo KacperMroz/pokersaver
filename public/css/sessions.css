@@ -19,7 +19,7 @@ section{
 section>div{
     border: 3px solid #5E5E5E;
     border-radius: 1em;
-    height: 250px;
+    height: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -41,5 +41,20 @@ section>div>.content{
     margin-left: 1em;
     display: flex;
     flex-direction: column;
+}
+{
+    content: "\f2ea";
+    font-size: 400%;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+@media only screen and (max-device-width: 420px){
+
+    section{
+        grid-template-columns: none;
+    }
 }
 

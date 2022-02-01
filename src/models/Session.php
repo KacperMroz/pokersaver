@@ -6,25 +6,34 @@ class Session
     private $buyin;
     private $cashout;
     private $result;
+    private $duration;
 
 
-    public function __construct($title, $buyin, $cashout)
+    public function __construct($title, $buyin, $cashout, $duration)
     {
         $this->title = $title;
         $this->buyin = $buyin;
         $this->cashout = $cashout;
         $this->result = $cashout - $buyin;
+        $this->duration = $duration;
     }
 
-    public function getId()
+
+
+
+
+    public function getDuration()
     {
-        return $this->id;
+        return $this->duration;
     }
 
-    public function setId($id): void
+
+    public function setDuration($duration): void
     {
-        $this->id = $id;
+        $this->duration = $duration;
     }
+
+
 
     public function getTitle()
     {

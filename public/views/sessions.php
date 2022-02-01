@@ -10,14 +10,7 @@
 </head>
 <body>
     <div class="sessions-container">
-        <header>
-            <a class="main_page_logo" href="/main">
-                <img src="public/img/logo.svg " style="width: 100%;height: 100%;">
-            </a>
-            <a class="main_page_profile" href="/profile">
-                <img src="public/img/profile.svg ">
-            </a>
-        </header>
+        <?php include('header.php')?>
         <section class="sessions">
             <?php foreach ($sessions as $session): ?>
                 <div id="session-1">
@@ -25,9 +18,10 @@
                         <h2><?= $session->getTitle()?></h2>
                     </div>
                     <div class = "content">
-                        <p>Buy In:  <?= $session->getBuyIn()?></p>
-                        <p>Cashout: <?= $session->getCashout()?></p>
-                        <p>Result:  <?= $session->getResult()?></p>
+                        <p>Buy In:  <?= $session->getBuyIn()?>zl</p>
+                        <p>Cashout: <?= $session->getCashout()?>zl</p>
+                        <p>Result:  <?= $session->getResult()?>zl</p>
+                        <p>Duration:  <?= $session->getDuration()?>hrs</p>
                     </div>
                 </div>
             <? endforeach; ?>

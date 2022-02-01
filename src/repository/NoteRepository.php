@@ -57,13 +57,14 @@ class NoteRepository extends Repository
         return $result;
     }
 
-    public function getNoteByTitle(string $searchString){
+    public function getNoteByTitle(string $searchString, $user_id){
         $searchString = '%'.strtolower($searchString).'%';
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM notes WHERE LOWER(title) LIKE :search OR LOWER(description) LIKE :search
+            SELECT * FROM notes WHERE LOWER(title) LIKE :search OR LOWER(description) LIKE :search AND notes.user_id = :user_id
         ');
         $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
+        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
         $stmt->execute();
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

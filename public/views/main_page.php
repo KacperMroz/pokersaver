@@ -9,14 +9,7 @@
 </head>
 <body>
     <div class="base-container">
-        <header>
-            <div class="main_page_logo">
-                <img src="public/img/logo.svg " style="width: 100%;height: 100%;">
-            </div>
-            <a class="main_page_profile" href="/profile">
-                <img src="public/img/profile.svg ">
-            </a>
-        </header>
+        <?php include('header.php')?>
         <div class="menu-container">
             <a class="new-session-container" href="/add_session">
                 <img src="public/img/cards.svg ">

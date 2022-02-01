@@ -19,6 +19,7 @@ class SessionController extends AppController
         $this->sessionRepository = new SessionRepository();
         $this->userRepository = new UserRepository();
         $this->id = $_COOKIE['id'];
+        $this->user = $this->userRepository->getUser($_COOKIE['user']);
         $this->sessions = $this->sessionRepository->getSessions($this->id);
     }
 
@@ -26,7 +27,7 @@ class SessionController extends AppController
 
         if($this->isPost()){
 
-            $session = new Session($_POST['title'], $_POST['buyin'], $_POST['cashout']);
+            $session = new Session($_POST['title'], $_POST['buyin'], $_POST['cashout'], $_POST['duration']);
             $this->sessionRepository->addSession($session, $this->id);
 
 
@@ -38,8 +39,7 @@ class SessionController extends AppController
     }
 
     public function sessions(){
-        $sessions = $this->sessionRepository->getSessions($this->id);
-        $this->render('sessions', ['sessions' => $sessions]);
+        $this->render('sessions', ['sessions' => $this->sessions]);
     }
 
     public function profile(){
@@ -47,12 +47,28 @@ class SessionController extends AppController
         $this->sessionCount = sizeof($this->sessions);
 
         $result = $this->getResultsSum();
+        $duration = $this->getDurationSum();
+
+        if($this->sessionCount == 0){
+            $average = 0;
+            $avgDuration = 0;
+        }else {
+            $average = $result/$this->sessionCount;
+            $avgDuration = $duration/$this->sessionCount;
+        }
+
+
+
+        $username = $this->user->getUsername();
 
         $this->render('profile',
             [
                 'sessionCount' => $this->sessionCount,
                 'result' => $result,
-                'average' => $result/$this->sessionCount
+                'average' => $average,
+                'duration' => $duration,
+                'avgDuration' => $avgDuration,
+                'username' => $username
                 ]
         );
     }
@@ -64,5 +80,14 @@ class SessionController extends AppController
         }
         return $sum;
     }
+
+    private function getDurationSum(): float{
+        $sum = 0.0;
+        foreach ($this->sessions as $session){
+            $sum += $session->getDuration();
+        }
+        return $sum;
+    }
+
 
 }

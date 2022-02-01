@@ -9,14 +9,7 @@
 </head>
 <body>
     <div class="base-container">
-        <header>
-            <a class="main_page_logo" href="/main">
-                <img src="public/img/logo.svg " style="width: 100%;height: 100%;">
-            </a>
-            <a class="main_page_profile" href="/profile">
-                <img src="public/img/profile.svg ">
-            </a>
-        </header>
+        <?php include('header.php')?>
         <div class="add-session-container">
             <form class="register" action="addSession" method="POST">
                 <div class="messages">
@@ -31,6 +24,7 @@
                 <input name="title" type="text" placeholder="session title">
                 <input name="buyin" type="number" placeholder="buy in">
                 <input name="cashout" type="number" placeholder="cashout">
+                <input name="duration" type="number" placeholder="duration">
                 <button type="submit">submit</button>
             </form>
         </div>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>a92b0e71-4731-4d1d-9c88-3763e31bf78f.SCHEMA:dcvo4qbs2tcctm.public</OriginalElement>
+  <nodes>
+    <node x="-132.0" y="181.0">a92b0e71-4731-4d1d-9c88-3763e31bf78f.TABLE:dcvo4qbs2tcctm.public.notes</node>
+    <node x="46.49999999999997" y="-24.0">a92b0e71-4731-4d1d-9c88-3763e31bf78f.TABLE:dcvo4qbs2tcctm.public.users</node>
+    <node x="257.99999999999994" y="160.0">a92b0e71-4731-4d1d-9c88-3763e31bf78f.TABLE:dcvo4qbs2tcctm.public.session</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="a92b0e71-4731-4d1d-9c88-3763e31bf78f.TABLE:dcvo4qbs2tcctm.public.session" target="a92b0e71-4731-4d1d-9c88-3763e31bf78f.TABLE:dcvo4qbs2tcctm.public.users" relationship="REFERENCES">
+      <point x="0.0" y="-93.5" />
+      <point x="344.49999999999994" y="146.0" />
+      <point x="124.99999999999997" y="146.0" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="a92b0e71-4731-4d1d-9c88-3763e31bf78f.TABLE:dcvo4qbs2tcctm.public.notes" target="a92b0e71-4731-4d1d-9c88-3763e31bf78f.TABLE:dcvo4qbs2tcctm.public.users" relationship="REFERENCES">
+      <point x="0.0" y="-60.5" />
+      <point x="-70.0" y="146.0" />
+      <point x="124.99999999999997" y="146.0" />
+      <point x="0.0" y="60.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.9999999999999999" showDependencies="false" x="850.0" y="355.0" />
+  <SelectedNodes>
+    <node>a92b0e71-4731-4d1d-9c88-3763e31bf78f.TABLE:dcvo4qbs2tcctm.public.users</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

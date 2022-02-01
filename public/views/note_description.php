@@ -11,13 +11,7 @@
 </head>
 <body>
 <div class="base-container">
-    <header>
-        <a class="main_page_logo" href="/main">
-            <img src="public/img/logo.svg " style="width: 100%;height: 100%;">
-        </a>
-        <a class="main_page_profile" href="/profile">
-            <img src="public/img/profile.svg ">
-        </a>
+    <?php include('header.php')?>
     </header>
     <section class="notes">
         <div id="note-1">

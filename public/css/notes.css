@@ -12,6 +12,8 @@
     width: 70%;
     padding: 2em;
     justify-self: center;
+    display: grid;
+    grid-template-columns: 10% 90%;
 }
 
 .search-bar > input {
@@ -20,6 +22,7 @@
     border: 1px solid #707070;
     border-radius: 23px;
     width: 100%;
+    height: 50%;
     text-align: center;
     letter-spacing: 0.72px;
     color: black;
@@ -58,7 +61,7 @@ a:hover{
     box-shadow: inset 0px 10px 10px #00000029;
     opacity: 0.8;
     border-radius: 50%;
-    width: 2.5em;
+    width: 2em;
     justify-self: end;
     margin: 20px;
     display: flex;
@@ -68,4 +71,34 @@ a:hover{
     font-size: 250%;
     color: darkgray;
     font-weight: 1000;
+}
+
+ .fa-user:before {
+     content: "\f007";
+     font-size: 1000%;
+ }
+
+.fa-undo-alt:before {
+    content: "\f2ea";
+    font-size: 400%;
+    color: black;
+}
+
+@media only screen and (max-device-width: 420px){
+
+    section{
+        grid-template-columns: none;
+    }
+
+    .search-bar{
+        width: 90%;
+    }
+
+    .fa-undo-alt:before {
+        font-size: 200%;
+    }
+
+    .new-note-button{
+        width: 1.5em;
+    }
 }

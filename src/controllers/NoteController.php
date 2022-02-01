@@ -54,7 +54,7 @@ class NoteController extends AppController
             header('Content-type: application/json');
             http_response_code(200);
 
-            echo json_encode($this->noteRepository->getNoteByTitle($decoded['search']));
+            echo json_encode($this->noteRepository->getNoteByTitle($decoded['search'], $this->user_id));
         }
     }
 }

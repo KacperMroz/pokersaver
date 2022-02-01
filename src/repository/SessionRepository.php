@@ -8,7 +8,7 @@ class SessionRepository extends Repository
 
     public function addSession(Session $session, $id): void{
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO public.session (user_id, title, buyin, cashout, result) VALUES (?, ?, ?, ?, ?);
+            INSERT INTO public.session (user_id, title, buyin, cashout, result, duration) VALUES (?, ?, ?, ?, ?, ?);
         ');
 
         $stmt->execute([
@@ -16,7 +16,8 @@ class SessionRepository extends Repository
             $session->getTitle(),
             $session->getBuyin(),
             $session->getCashout(),
-            $session->getResult()
+            $session->getResult(),
+            $session->getDuration(),
         ]);
     }
 
@@ -33,7 +34,8 @@ class SessionRepository extends Repository
             $result[] = new Session(
                 $session['title'],
                 $session['buyin'],
-                $session['cashout']
+                $session['cashout'],
+                $session['duration']
             );
         }
         return $result;
